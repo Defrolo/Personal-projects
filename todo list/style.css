@@ -1,0 +1,192 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px; /* Add some padding */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; /* Increased max-width */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 0; /* Remove default top margin */
+    margin-bottom: 25px;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+#task-input {
+    flex-grow: 1; /* Allow input to take available space */
+    min-width: 200px; /* Minimum width */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#category-select,
+#add-task-btn {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fff; /* Default background */
+    font-size: 1rem;
+}
+
+#add-task-btn {
+    background-color: #5cb85c;
+    color: white;
+    border-color: #4cae4c;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; /* Prevent button text wrapping */
+}
+
+#add-task-btn:hover {
+    background-color: #4cae4c;
+}
+
+.filter-section {
+    display: flex;
+    gap: 10px; /* Reduced gap */
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap; /* Allow wrapping */
+    background-color: #f9f9f9; /* Slight background */
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.filter-section label {
+    font-weight: normal; /* Less prominent labels */
+    color: #555;
+    margin-right: 5px; /* Space after label */
+}
+
+#filter-select,
+#filter-category-select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    flex-grow: 1; /* Allow selects to grow */
+    min-width: 120px; /* Minimum width */
+}
+
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#task-list li {
+    background-color: #f9f9f9;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#task-list li.completed {
+    background-color: #e0ffe0;
+    text-decoration: line-through;
+    color: #777;
+}
+
+#task-list li .task-content {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#task-list li .task-text {
+    cursor: pointer; /* Indicate text is editable */
+}
+
+
+#task-list li .category-badge {
+    font-size: 0.8em;
+    padding: 3px 6px;
+    border-radius: 3px;
+    background-color: #ddd;
+    color: #333;
+    white-space: nowrap;
+}
+
+#task-list li .actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 1.1rem;
+    color: #777;
+    transition: color 0.2s ease;
+}
+
+#task-list li .actions button.edit-btn:hover {
+    color: #007bff;
+}
+
+#task-list li .actions button.delete-btn:hover {
+    color: #dc3545;
+}
+
+#task-list li .actions button.complete-btn:hover {
+    color: #28a745;
+}
+
+#task-list li.completed .actions button.complete-btn {
+    color: #28a745; /* Keep green when completed */
+}
+
+/* Hide elements visually but keep accessible */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Style for editing mode */
+.editing .task-text {
+    display: none;
+}
+.editing .edit-input {
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    flex-grow: 1;
+}
+.edit-input {
+    display: none; /* Hidden by default */
+}

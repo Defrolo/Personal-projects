@@ -1,0 +1,63 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+#game-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#score-board, #timer {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#game-area {
+    width: 500px;
+    height: 400px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    position: relative;
+    overflow: hidden; /* Hide objects that go outside */
+    margin: 20px auto;
+}
+
+#player {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    position: absolute;
+    bottom: 10px;
+    border-radius: 5px;
+    /* No CSS positioning here - controlled fully by JS */
+}
+
+.falling-object {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    position: absolute;
+    top: -30px; /* Start above the game area */
+    border-radius: 50%; /* Make them circles */
+}
+
+#start-button, #restart-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#game-over {
+    margin-top: 20px;
+    color: red;
+}

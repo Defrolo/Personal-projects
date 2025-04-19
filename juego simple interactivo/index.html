@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Interactivo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Atrapa Objetos</h1>
+        <div id="score-board">Puntuación: <span id="score">0</span></div>
+        <div id="timer">Tiempo: <span id="time-left">60</span>s</div>
+        <div id="game-area">
+            <div id="player"></div>
+            <!-- Los objetos que caen se añadirán aquí con JS -->
+        </div>
+        <button id="start-button">Empezar Juego</button>
+        <div id="game-over" style="display: none;">
+            <h2>¡Juego Terminado!</h2>
+            <p>Puntuación Final: <span id="final-score">0</span></p>
+            <button id="restart-button">Jugar de Nuevo</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
